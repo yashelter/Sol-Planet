@@ -1,0 +1,18 @@
+1 npm install -g ts-node
+2 git clone https://github.com/metaplex-foundation/metaplex.git
+2.!!!1 open that folder!!!
+2.2 https://docs.solana.com/cli/install-solana-cli-tools
+3 solana config set --url https://api.mainnet-beta.solana.com
+4 solana-keygen new --outfile ~/.config/solana/key.json
+5 solana config set --keypair ~/.config/solana/key.json
+6 add assets and files into it
+7 cd js -> yarn install - >yarn build -> yarn bootstrap
+8 cd ..
+####candy machine v2####
+9 ts-node js/packages/cli/src/candy-machine-v2-cli.ts upload -e mainnet-beta -k ~/.config/solana/key.json -cp ~/.config/solana/config.json ./assets -c cache
+10 ts-node js/packages/cli/src/candy-machine-v2-cli.ts verify -e devnet -k ~/.config/solana/key.json -cp ~/.config/solana/config.json  -c cache
+
+npm i --save-dev @types/canvas-confetti
+
+solana transfer --from ~/.config/solana/key.json 6x6oA6gdeyHhgcXMwy14Hqw2oqnjMEUfjmmC9BTLHith 0.5 --allow-unfunded-recipient --url https://api.devnet.solana.com --fee-payer ~/.config/solana/key.json
+
